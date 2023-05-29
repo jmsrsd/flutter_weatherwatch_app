@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-import 'screens/home_screen.dart';
+import 'router.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
         ),
         useMaterial3: true,
       ),
-      home: const HomeScreen(
-        title: 'Flutter Demo Home Page',
-      ),
+      routerConfig: router,
     );
   }
 }
